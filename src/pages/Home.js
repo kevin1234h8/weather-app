@@ -6,8 +6,8 @@ const Home = () => {
   const [city, setCity] = useState("");
   const [moreCity, setMoreCity] = useState("");
   const API_KEY = "07f706c1945b8e054602b87425ffd1d9";
-  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
 
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
   const date = new Date();
   const days = [
     "Monday",
@@ -88,7 +88,7 @@ const Home = () => {
                 )} */}
                 <img
                   src={`http://openweathermap.org/img/w/${
-                    (datas?.weather ?? [])[0].icon
+                    (datas?.weather ?? [])[0]?.icon
                   }.png`}
                   alt=""
                 />
